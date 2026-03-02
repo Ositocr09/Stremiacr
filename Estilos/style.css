@@ -214,6 +214,13 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
 /* PLANES */
 .plan-card {
     background: #1A1A1D;
@@ -621,6 +628,21 @@ img {
     }
 }
 
+/* WhatsApp responsive */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .whatsapp-float img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
 /* ============================= */
 /* BENEFICIOS */
 /* ============================= */
@@ -679,4 +701,20 @@ img {
         grid-template-columns: 1fr;
     }
 
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
 }
