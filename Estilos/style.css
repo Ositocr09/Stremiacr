@@ -522,18 +522,29 @@ img {
     margin-bottom: 40px;
 }
 
-/* Contenedor */
+/* Contenedor del carrusel */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Track */
 .carousel-track {
     display: flex;
     gap: 20px;
-    transition: transform 0.4s ease;
+    width: max-content;
+}
+
+/* Ocultar barra de scroll */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        display: none;
+    }
 }
 
 /* Slides */
@@ -718,3 +729,4 @@ img {
         width: 100%;
     }
 }
+
