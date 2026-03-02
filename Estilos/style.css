@@ -39,15 +39,23 @@ header {
     padding: 12px 0;
 }
 
-/* Logo */
+/* Logo Navbar */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .logo img {
-    height: 280px;
-    width: auto;
+    width: 85%;
+    max-width: 340px;
+    height: auto;
 }
 
 @media (max-width: 768px) {
     .logo img {
-        height: 40px;
+        width: 90%;
+        max-width: none;
     }
 }
 
@@ -734,6 +742,7 @@ img {
         width: 100%;
     }
 }
+
 
 
 
