@@ -59,6 +59,12 @@ header {
     }
 }
 
+@media (max-width: 1024px) {
+    .nav {
+        padding: 6px 0;
+    }
+}
+
 /* BOTONES */
 .btn {
     background: #2D6BFF;
@@ -742,6 +748,7 @@ img {
         width: 100%;
     }
 }
+
 
 
 
