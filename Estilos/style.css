@@ -36,7 +36,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 /* Logo */
@@ -734,5 +734,6 @@ img {
         width: 100%;
     }
 }
+
 
 
