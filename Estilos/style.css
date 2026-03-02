@@ -35,15 +35,20 @@ header {
 .nav {
     display: flex;
     justify-content: center;
-    /* centra el logo */
     align-items: center;
     padding: 10px 0;
-    /* menos alto */
 }
 
+/* Logo */
 .logo img {
-    height: 400px;
-    width: 600px;
+    height: 280px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
+    }
 }
 
 /* BOTONES */
@@ -729,4 +734,5 @@ img {
         width: 100%;
     }
 }
+
 
