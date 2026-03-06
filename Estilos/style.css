@@ -36,7 +36,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 0;
+    padding: 8px 0;
 }
 
 /* Logo Navbar */
@@ -46,9 +46,10 @@ header {
     justify-content: center;
 }
 
+
 .logo img {
     width: 85%;
-    max-width: 340px;
+    max-width: 300px;
     height: auto;
 }
 
@@ -329,7 +330,7 @@ header {
     font-size: 14px;
 }
 
-/* Responsive  logos centrados en footer*/
+/* Responsive */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
@@ -423,101 +424,138 @@ img {
     max-width: 100%;
 }
 
-/* ============================= */
-/* PRODUCTO RECOMENDADO */
-/* ============================= */
+/* IPTV SECCCION */
 
-.featured-section {
-    padding: 90px 0;
-    background: #0B0B0F;
-    text-align: center;
+.iptv-section{
+margin-top:80px;
 }
 
-.featured-badge {
-    display: inline-block;
-    background: #2D6BFF;
-    padding: 20px 30px;
-    border-radius: 20px;
-    font-size: 20px;
-    margin-bottom: 20px;
+.iptv-header{
+text-align:center;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
 }
 
-.featured-card {
-    background: #1A1A1D;
-    border-radius: 18px;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 40px;
-    align-items: center;
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+.iptv-header h3{
+font-size:32px;
+margin-bottom:10px;
 }
 
-.featured-content {
-    text-align: left;
+.iptv-header p{
+color:#aaa;
+line-height:1.6;
 }
 
-.featured-content h3 {
-    font-size: 32px;
-    margin-bottom: 15px;
+/* PLANES */
+
+.iptv-plans{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
 }
 
-.featured-description {
-    color: #B3B3B3;
-    margin-bottom: 20px;
-    line-height: 1.6;
+/* TARJETAS */
+
+.plan-card{
+position:relative;
+background:#0f1115;
+padding:35px;
+border-radius:14px;
+border:1px solid #1A1A1D;
+transition:all .35s ease;
 }
 
-.featured-features {
-    list-style: none;
-    margin-bottom: 20px;
+/* HOVER */
+
+.plan-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 35px rgba(0,0,0,.4);
 }
 
-.featured-features li {
-    margin-bottom: 8px;
+/* LOGO */
+
+.plan-logo{
+position:absolute;
+top:18px;
+right:18px;
+width:100px;
+opacity:.9;
 }
 
-.featured-price {
-    font-size: 20px;
-    margin-bottom: 20px;
+/* TITULO */
+
+.plan-card h4{
+font-size:22px;
+margin-bottom:20px;
 }
 
-.featured-price span {
-    font-size: 28px;
-    color: #2D6BFF;
-    font-weight: bold;
+/* LISTA */
+
+.plan-card ul{
+margin-bottom:25px;
+line-height:1.7;
 }
 
-/* Imagen */
-.featured-image img {
-    width: 100%;
-    max-width: 350px;
-    display: block;
-    margin: auto;
-    filter: drop-shadow(0 0 20px rgba(45, 107, 255, 0.3));
+.plan-card li{
+margin-bottom:6px;
+color:#ddd;
 }
 
-/* Hover efecto premium */
-.featured-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 30px 80px rgba(45, 107, 255, 0.15);
-    transition: 0.3s;
+/* PRECIO */
+
+.plan-price{
+font-size:28px;
+font-weight:bold;
+color:#3b82f6;
+margin-bottom:15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .featured-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 35px;
-    }
-
-    .featured-content {
-        text-align: center;
-    }
+.plan-price span{
+font-size:14px;
+color:#aaa;
+font-weight:normal;
 }
+
+/* VIP */
+
+.vip{
+border:2px solid #3b82f6;
+background:#0b0f18;
+box-shadow:0 0 25px rgba(59,130,246,.15);
+}
+
+.vip:hover{
+box-shadow:0 0 35px rgba(59,130,246,.35);
+}
+
+/* BADGE */
+
+.vip-badge{
+position:absolute;
+top:-12px;
+left:20px;
+background:#3b82f6;
+padding:5px 12px;
+border-radius:6px;
+font-size:12px;
+font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+.iptv-plans{
+grid-template-columns:1fr;
+}
+
+.plan-card{
+text-align:left;
+}
+
+}
+/* FIN IPTV*/
 
 /* Flecha desactivada */
 .carousel-btn.disabled {
@@ -730,7 +768,6 @@ img {
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -748,6 +785,7 @@ img {
         width: 100%;
     }
 }
+
 
 
 
