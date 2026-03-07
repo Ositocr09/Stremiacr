@@ -81,4 +81,25 @@ if (track && nextBtn && prevBtn && slides.length > 0) {
 
     // Estado inicial
     updateButtons();
+
 }
+// Menu Navbar efecto scroll
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 50){
+navbar.classList.add("scrolled");
+}else{
+navbar.classList.remove("scrolled");
+}
+
+});
+
+ // Menu Navbar
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
