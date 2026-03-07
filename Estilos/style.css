@@ -878,6 +878,26 @@ border:2px solid #2f6cff;
 box-shadow:0 0 25px rgba(47,108,255,0.25);
 }
 
+.reseller-card a{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+border-radius:8px;
+text-align:center;
+white-space:normal;
+}
+
+@media (max-width:768px){
+
+.reseller-card a{
+width:100%;
+max-width:220px;
+margin-left:auto;
+margin-right:auto;
+display:block;
+}
+
+}
 
 
 
