@@ -28,8 +28,42 @@ body {
 }
 
 /* NAVBAR */
-header {
-    border-bottom: 1px solid #1A1A1D;
+/* ========================================= */
+/* HEADER STREAMIACR                         */
+/* ========================================= */
+
+.site-header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+/* Imagen completa sin deformarse */
+.header-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    margin: 0;
+}
+
+/* Menú encima de la imagen */
+.site-header .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    background: transparent;
+
+    color: white;
+    z-index: 10;
+
+    line-height: normal;
 }
 
 .nav {
@@ -70,16 +104,13 @@ header {
 
 /* NAVBAR MODERNO */
 
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
-
-background:transparent;
-
-transition:all 0.3s ease;
+.navbar {
+    width: 100%;
+    background: transparent;
+    color: white;
 }
+
+
 
 .navbar.scrolled{
 background:rgba(5,7,13,0.95);
@@ -89,13 +120,17 @@ backdrop-filter:blur(10px);
 border-bottom:1px solid #11151d;
 }
 
-.nav-container{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 20px;
+.nav-container {
+    width: 100%;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 16px 20px;
 }
 
 .logo{
@@ -115,7 +150,7 @@ list-style:none;
 .nav-links a{
 text-decoration:none;
 color:#c6c9d4;
-font-size:14px;
+font-size:20px;
 transition:0.3s;
 }
 
@@ -170,7 +205,7 @@ display:flex;
 /* AJUSTE HERO */
 
 body{
-padding-top:70px;
+padding-top: 0;
 }
 
 section{
@@ -560,12 +595,196 @@ color:#aaa;
 line-height:1.6;
 }
 
-/* PLANES */
+/* ========================================= */
+/* IPTV - SERVICIO ÚNICO                     */
+/* ========================================= */
 
-.iptv-plans{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
+.iptv-plans {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Tarjeta principal IPTV */
+.iptv-main-card {
+    width: 100%;
+    max-width: 850px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #0f1118,
+        #111827,
+        #0b0f18
+    );
+
+    border: 1px solid rgba(59, 130, 246, 0.35);
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 35px rgba(45, 107, 255, 0.12),
+        inset 0 0 30px rgba(255, 255, 255, 0.02);
+
+    transition: 0.35s ease;
+}
+
+.iptv-main-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 45px rgba(45, 107, 255, 0.25);
+}
+
+/* Logo */
+.iptv-main-card .plan-logo {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 180px;
+
+    flex-shrink: 0;
+
+    opacity: 1;
+}
+
+/* Contenido */
+.iptv-content {
+    flex: 1;
+}
+
+/* Etiqueta */
+.iptv-badge {
+    display: inline-block;
+
+    background: #2D6BFF;
+
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+/* Título */
+.iptv-main-card h4 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.iptv-description {
+    color: #b3b3b3;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+/* Lista */
+.iptv-main-card ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0 0 25px 0;
+
+    line-height: 1.8;
+}
+
+.iptv-main-card li {
+    color: #dddddd;
+
+    margin-bottom: 6px;
+}
+
+/* Precio */
+.iptv-offer {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 5px;
+
+    margin-bottom: 20px;
+}
+
+.iptv-price {
+    font-size: 36px;
+
+    font-weight: bold;
+
+    color: #3b82f6;
+}
+
+.iptv-month {
+    color: #aaa;
+
+    font-size: 15px;
+}
+
+/* Botón */
+.iptv-btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    font-size: 16px;
+
+    border-radius: 8px;
+}
+
+/* ========================================= */
+/* IPTV RESPONSIVE                           */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    .iptv-main-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+        gap: 20px;
+    }
+
+    .iptv-main-card .plan-logo {
+        width: 150px;
+    }
+
+    .iptv-main-card h4 {
+        font-size: 26px;
+    }
+
+    .iptv-main-card ul {
+        text-align: left;
+    }
+
+    .iptv-offer {
+        justify-content: center;
+    }
+
+    .iptv-btn {
+        width: 100%;
+        max-width: 280px;
+    }
 }
 
 /* TARJETAS */
@@ -590,7 +809,7 @@ box-shadow:0 10px 35px rgba(0,0,0,.4);
 
 .plan-logo{
 position:absolute;
-top:10px;
+top: 10px;
 right:10px;
 width:100px;
 opacity:.9;
@@ -669,6 +888,7 @@ text-align:left;
 
 }
 /* FIN IPTV*/
+
 
 /* Flecha desactivada */
 .carousel-btn.disabled {
@@ -899,7 +1119,6 @@ text-align:left;
     }
 }
 
-
 /* SECCION REVENDEDORES */
 
 .resellers-section{
@@ -1011,11 +1230,4 @@ display:block;
 }
 
 }
-
-
-
-
-
-
-
 
